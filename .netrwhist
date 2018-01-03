@@ -1,8 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =6
-let g:netrw_dirhist_1='/Users/shoemakerdr'
-let g:netrw_dirhist_2='/Users/shoemakerdr/dev/js/votr-api'
-let g:netrw_dirhist_3='/Users/shoemakerdr'
-let g:netrw_dirhist_4='/Users/shoemakerdr/.SpaceVim.d'
-let g:netrw_dirhist_5='/Users/shoemakerdr/dev/elm/elm-architecture-tutorial'
-let g:netrw_dirhist_6='/Users/shoemakerdr/dev/elm/elm-tictactoe'
