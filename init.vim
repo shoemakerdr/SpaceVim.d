@@ -17,7 +17,12 @@ call SpaceVim#layers#load('lang#swig')
 call SpaceVim#layers#load('lang#tmux')
 call SpaceVim#layers#load('lang#vim')
 call SpaceVim#layers#load('lang#xml')
-call SpaceVim#layers#load('shell')
+call SpaceVim#layers#load('shell',
+        \ {
+        \ 'default_position' : 'bottom',
+        \ 'default_height' : 30,
+        \ }
+        \ )
 call SpaceVim#layers#load('tools#screensaver')
 let g:spacevim_enable_vimfiler_welcome = 1
 let g:spacevim_enable_debug = 1
@@ -60,6 +65,7 @@ let g:spacevim_statusline_separator = 'arrow'
 let g:spacevim_disabled_plugins=[
 \ ['othree/yajs.vim'],
 \ ['othree/es.next.syntax.vim'],
+\ ['neovimhaskell/haskell-vim'],
 \ ]
 
 " If you want to add some custom plugins, use these options:
@@ -69,7 +75,24 @@ let g:spacevim_custom_plugins = [
 \ ['wavded/vim-stylus'],
 \ ]
 
-autocmd Filetype elm setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2
+let g:syntastic_disabled_filetypes=['html']
+let g:neomake_html_enabled_makers = []
+let g:neomake_haskell_enabled_makers = ['hlint']
+
+" Disable neomake
+" let g:spacevim_enable_neomake = 0
+
+" Syntastic set up for elm-vim
+" let g:syntastic_always_populate_loc_list = 1
+" let g:syntastic_auto_loc_list = 1
+
+" let g:elm_syntastic_show_warnings = 1
+let g:polyglot_disabled = ['elm']
+
+autocmd Filetype javascript setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4
+autocmd Filetype elm setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4
+autocmd Filetype haskell setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4
+" autocmd BufWritePre * silent! cd %:p:h
 
 " rainbow_levels plugin
     " red=['#ec5f67', '203']
@@ -96,4 +119,23 @@ autocmd VimEnter * let g:rainbow_levels = g:derek_rainbow_levels
 " elm-format
 let g:elm_format_autosave = 1
 
+" disable annoying haskell-vim indention rules
+let g:haskell_indent_if = 4
+let g:haskell_indent_case = 4
+let g:haskell_indent_let = 4
+let g:haskell_indent_where = 4
+let g:haskell_indent_before_where = 4
+let g:haskell_indent_after_bare_where = 4
+let g:haskell_indent_do = 3
+let g:haskell_indent_in = 0
+let g:haskell_indent_guard = 4
 
+
+" NERDcomment use -- for commenting haskell
+let g:NERDAltDelims_haskell = 1
+
+" Chromatica setup for nvim
+let g:chromatica#libclang_path = '/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libclang.dylib'
+
+" custom mappings
+nnoremap <C-T> :! elm-test<CR>
