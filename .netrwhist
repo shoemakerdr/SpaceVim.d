@@ -1,0 +1,8 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_1='/home/shoemakd/dev/tsi/AppCatalog/core'
+let g:netrw_dirhist_2='/home/shoemakd/.SpaceVim'
+let g:netrw_dirhist_3='/home/shoemakd/.SpaceVim.d'
+let g:netrw_dirhist_4='/home/shoemakd/.SpaceVim'
+let g:netrw_dirhist_5='/home/shoemakd'
+let g:netrw_dirhist_6='/home/shoemakd/.SpaceVim'
