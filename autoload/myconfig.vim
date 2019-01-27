@@ -35,7 +35,7 @@ func! myconfig#after() abort
     let g:neomake_python_enabled_makers=[]
     let g:spacevim_enable_debug = 1
     let g:deoplete#auto_complete_delay = 150
-    let g:spacevim_enable_tabline_filetype_icon = 0
+    let g:spacevim_enable_tabline_filetype_icon = 1
     let g:spacevim_enable_os_fileformat_icon = 1
     let g:spacevim_buffer_index_type = 1
     let g:neomake_vim_enabled_makers = []
@@ -128,6 +128,8 @@ func! myconfig#after() abort
         \{'ctermfg': 137,  'guifg': '#ab7967'}]
 
     autocmd VimEnter * let g:rainbow_levels = g:derek_rainbow_levels
+
+    let g:Powerline_symbols = 'unicode'
 
     " elm-format
     let g:elm_format_autosave = 1

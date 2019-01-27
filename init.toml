@@ -18,11 +18,11 @@
     enable_guicolors = false
     # Disable statusline separator, if you want to use other value, please
     # install nerd fonts
-    statusline_separator = "nil"
+    statusline_separator = "arrow"
     statusline_inactive_separator = "nil"
     buffer_index_type = 4
-    enable_tabline_filetype_icon = false
-    enable_statusline_display_mode = false
+    enable_tabline_filetype_icon = true
+    enable_statusline_display_mode = true
     enable_language_specific_leader = false
     bootstrap_before = "myconfig#before"
     bootstrap_after = "myconfig#after"
